@@ -34,3 +34,25 @@ sudo nginx -t
 # restart nginx server
 
 ```
+
+## Certbot for HTTPS
+
+### Install Certbot
+```
+sudo apt-get update
+sudo apt-get install software-properties-common
+sudo add-apt-repository universe
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install certbot python-certbot-nginx
+```
+### Run Certbot (Auto-add certificate)
+
+```
+sudo certbot --nginx
+```
+
+### Check auto renewal 
+```
+sudo certbot renew --dry-run
+```
